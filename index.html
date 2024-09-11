@@ -3,32 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Formulário de Contato</title>
 </head>
-<body>
-  <form action="#">
-    <label for="firstName">Primeiro Nome:</label> 
-    <input type="text" name="" id="firstName"></form>
-    <label for="lastName">Último Nome:</label> 
-    <input type="text" name="" id="lastName"></form>
 
-    <label for="emailAdress">Email:</label> 
-    <input type="email" name="" id="emailAdress">
+<body class="h-screen flex flex-col items-center justify-center bg-gray-900">
+  <div class=" bg-black text-slate-200 p-8 w-1/2 h-1/2 rounded-lg">
+    <h1 class="text-3xl font-bold">Entre em contato conosco</h1>
+    
+    <form  name="" action="#">
+      <label for="firstName">Primeiro Nome:</label>
+      <input type="text" name="" id="firstName">
 
-    <label for="">Tipo de Consulta:</label>
-    <label for=""></label>
-    <input type="radio" name="" id=""> Consulta Geral
-    <input type="radio" name="" id=""> Pedido de Suporte
+      <label for="lastName">Último Nome:</label>
+      <input type="text" name="" id="lastName">
 
-    <label for="">Mensagem:</label>
-    <textarea name="" id=""></textarea>
+      <label for="emailAdress">Email:</label>
+      <input type="email" name="" id="emailAdress">
+      
+      <label for="">Tipo de Consulta:</label>
+      
+      <input type="radio" name="" id=""> Consulta Geral
+      <input type="radio" name="" id=""> Pedido de Suporte
 
-    <input type="checkbox" name="" id=""> Eu aceito receber contato da equipe.
+      <label for="">Mensagem:</label>
+      <textarea name="" id=""></textarea>
 
-    <button type="submit">Enviar</button>
+      <input type="checkbox" name="" id=""> Eu aceito receber contato da equipe.
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
