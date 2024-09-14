@@ -10,40 +10,46 @@
 </head>
 
 <body class="min-h-screen flex flex-col items-center justify-center bg-green-200">
-  <div class=" bg-white  text-slate-200 p-3 h-full max-h-screen w-4/5 sm:w-1/2 rounded-lg">
-    <h1 class="text-md sm:text-base md:text-xl lg:text-3xl text-gray-900 p-2 font-bold sm:text-basis">
+  <div class=" bg-white p-5 h-full max-h-screen w-4/5 sm:w-1/2 shadow-md rounded-lg">
+    
+    <h1 class="text-md sm:text-base md:text-xl lg:text-3xl text-gray-700  font-bold sm:text-basis px-8 pt-3 pb-1">
       Entre em contato conosco
     </h1>
     
-      <form class="flex flex-col p-2 space-y-2 text-md sm:text-base md:text-xl lg:text-1xl text-gray-500" name="" action="#">
+    <form class="flex flex-col px-8 pt-6 pb-10 mb-5 text-md sm:text-base md:text-xl lg:text-1xl text-gray-500" name="" action="#">
+        <label class="mb-2" for="primeiroNome">Primeiro Nome:</label>
+        <input class="mb-2" type="text" name="" id="firstName" required>
         
-        <label class="block" for="firstName">Primeiro Nome:</label>
-        <input class="w-full" type="text" name="" id="firstName" required>
+        <label class="mb-2" for="ultimoNome">Último Nome:</label>
+        <input class="mb-2" type="text" name="" id="lastName">
         
-        <label for="lastName">Último Nome:</label>
-        <input type="text" name="" id="lastName">
-        
-        <label for="emailAdress">Email:</label>
-        <input type="email" name="" id="emailAdress">
+        <label class="mb-2" for="emailAdress">Email:</label>
+        <input class="mb-2" type="email" name="" id="emailAdress">
       
-        <label for="">Tipo de Consulta:</label>
-      
-        <label for=""> Consulta Geral
-          <input type="radio" name="" id="">
-        </label> 
+        <label class="mb-4" for="">Tipo de Consulta:</label>
 
-        <label for=""> Pedido de Suporte
-          <input type="radio" name="" id=""> 
-        </label>
+        <div class="flex flex-col md:flex-row justify-between mb-4">
+          <label class="w-full md:w-1/2 mb-2" for="">Consulta Geral
+            <input type="radio" name="consulta" id="consultaGeral">
+          </label>
+        
+          <label class="w-full md:w-1/2 mb-2" for="">Pedido de Suporte
+            <input type="radio" name="consulta" id="pedidoSuporte">
+          </label>
+        </div>
+        
+         
 
-        <label for="">Mensagem:</label>
-        <textarea name="" id=""></textarea>
+        <label class="mb-2" for="">Mensagem:</label>
+        <textarea class="mb-2" name="" id=""></textarea>
 
-        <label for=""> Eu aceito receber contato da equipe.
+        <label class="mb-4" for=""> Eu aceito receber contato da equipe.
           <input type="checkbox" name="" id=""> 
         </label>
 
-        <button type="submit">Enviar</button>
+        <button class="bg-green-600" type="button">
+          Enviar
+        </button>
       </form>
     
   </div>
