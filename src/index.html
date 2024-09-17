@@ -16,35 +16,48 @@
       Entre em contato conosco
     </h1>
     
-    <form class="flex flex-col px-8 pt-6 pb-10 mb-5 text-md sm:text-base md:text-xl lg:text-1xl text-gray-500" name="" action="#">
-        <label class="mb-2" for="primeiroNome">Primeiro Nome:</label>
-        <input class="mb-2" type="text" name="" id="firstName" required>
+    <form class="flex flex-col sm:flex-col px-8 pt-6 pb-10 mb-5 text-md sm:text-base md:text-xl lg:text-1xl text-gray-500" name="" action="#">
         
-        <label class="mb-2" for="ultimoNome">Último Nome:</label>
-        <input class="mb-2" type="text" name="" id="lastName">
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:space-x-4">
+
+          <div class="flex flex-col sm:w-1/2">
+            <label class="mb-2" for="primeiroNome">Primeiro Nome:</label>
+            <input class="mb-2 border rounded-lg shadow-sm p-2" type="text" name="" id="firstName" required>
+          </div>
+
+          <div class="flex flex-col sm:w-1/2">
+            <label class="mb-2" for="ultimoNome">Ultimo Nome:</label>
+            <input class="mb-2 border rounded-lg shadow-sm p-2"  type="text" name="" id="lastName">
+          </div>
+        </div>
         
         <label class="mb-2" for="emailAdress">Email:</label>
-        <input class="mb-2" type="email" name="" id="emailAdress">
+        <input class="mb-2 border rounded-lg shadow-sm p-2" type="email" name="" id="emailAdress">
       
         <label class="mb-4" for="">Tipo de Consulta:</label>
 
-        <div class="flex flex-col md:flex-row justify-between mb-4">
-          <label class="w-full md:w-1/2 mb-2" for="">Consulta Geral
-            <input type="radio" name="consulta" id="consultaGeral">
-          </label>
+        <div class="flex flex-col sm:flex-row sm:space-x-4">
+
+          <div class="w-full sm:w-1/2 mb-2 sm:mb-0">
+            <label class="border rounded-lg shadow-sm p-2 w-full flex" for="">
+              <input class="m-2" type="radio" name="consulta" id="consultaGeral"> Consulta Geral
+            </label>
+          </div>
         
-          <label class="w-full md:w-1/2 mb-2" for="">Pedido de Suporte
-            <input type="radio" name="consulta" id="pedidoSuporte">
-          </label>
+          <div class="w-full sm:w-1/2 mb-5 sm:mb-0">
+            <label class="border rounded-lg shadow-sm p-2 w-full flex" for="">
+              <input class="m-2" type="radio" name="consulta" id="pedidoSuporte"> 
+              Pedido de Suporte
+            </label>
+          </div>
         </div>
         
-         
-
         <label class="mb-2" for="">Mensagem:</label>
-        <textarea class="mb-2" name="" id=""></textarea>
+        <textarea class="mb-2 border rounded-lg shadow-sm p-2 resize-none" name="" id=""></textarea>
 
-        <label class="mb-4" for=""> Eu aceito receber contato da equipe.
-          <input type="checkbox" name="" id=""> 
+        <label class="mb-4" for="">
+          <input class="mr-2 leading-tight" type="checkbox" name="" id=""> 
+          Eu aceito receber contato da equipe.
         </label>
 
         <button class="bg-green-600" type="button">
