@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Karla', 'sans-serif'],
-        // Você pode adicionar outras famílias de fontes aqui
+        
       },
     },
     screens: {
