@@ -16,24 +16,27 @@
       Entre em contato conosco
     </h1>
     
-    <form class="flex flex-col sm:flex-col p-4 text-md sm:text-base md:text-xl lg:text-1xl text-gray-500" name="" action="#">
+    <form id="form" class="flex flex-col sm:flex-col p-4 text-md sm:text-base md:text-xl lg:text-1xl text-gray-500" name="" action="#">
         
         <div class="flex flex-col sm:flex-row sm:justify-between sm:space-x-4">
 
           <div class="flex flex-col sm:w-1/2">
             <label class="mb-2" for="primeiroNome">Primeiro Nome:</label>
-            <input class="mb-2 border rounded-lg shadow-sm p-2" type="text" name="" id="firstName" required>
+            <input oninput="validacaoNome()" class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600  required" type="text" name="" id="firstName" required>
+            <span class="span-required hidden text-xs text-red-600">O campo de nome é obrigatório</span>
           </div>
 
           <div class="flex flex-col sm:w-1/2">
-            <label class="mb-2" for="ultimoNome">Ultimo Nome:</label>
-            <input class="mb-2 border rounded-lg shadow-sm p-2"  type="text" name="" id="lastName">
+            <label class="mb-2" for="ultimoNome">Sobrenome:</label>
+            <input oninput="validacaoNome()" class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600 required"  type="text" name="" id="lastName">
+            <span class="span-required hidden text-xs text-red-600">O campo de sobrenome é obrigatório</span>
           </div>
         </div>
         
         <label class="mb-2" for="emailAdress">Email:</label>
-        <input class="mb-2 border rounded-lg shadow-sm p-2" type="email" name="" id="emailAdress">
-      
+        <input oninput="validacaoNome()" class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600  required" type="email" name="" id="emailAdress">
+        <span class="span-required hidden text-xs text-red-600">O campo de email é obrigatório</span>
+
         <label class="mb-4" for="">Tipo de Consulta:</label>
 
         <div class="flex flex-col sm:flex-row sm:space-x-4">
@@ -53,12 +56,14 @@
         </div>
         
         <label class="mb-2" for="">Mensagem:</label>
-        <textarea class="p-5 mb-4 border rounded-lg shadow-sm resize-none" name="" id=""></textarea>
+        <textarea oninput="validacaoNome()" class="p-5 mb-4 border focus:outline-green-600 rounded-lg shadow-sm resize-none required" name="" id=""></textarea>
+        <span class="span-required hidden text-xs text-red-600">Este campo é obrigatório</span>
 
-        <label class="mb-2" for="">
-          <input class="mr-2 leading-tight" type="checkbox" name="" id=""> 
+        <label class="mb-2" for="checkbox">
+          <input class="mr-2  required" type="checkbox" name="" id="checkbox"> 
           Eu aceito receber contato da equipe.
         </label>
+        <span class="span-required ">Você deve aceitar os termos e condições para prosseguir</span>
       </form>
 
       <button class="bg-green-600 font-bold text-white rounded-md p-2 w-full" type="button">Enviar</button>
