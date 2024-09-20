@@ -10,15 +10,21 @@ function setError(index){
 
 function removeError(index){
     campos[index].classList.remove('border-red-500');
-    spans[index].classList.add('hidden')
+    spans[index].classList.add('hidden');
 }
 
-function validacaoNome() {
+function validacaoCaracteres() {
    campos.forEach((campo, index) => {
-       if(campo.value.length < 3){
-           setError(index);
-       }else{
-           removeError(index);
-       }
-   }) 
+    campo.addEventListener('blur', ()=> {
+        if(campo.value.length < 3){
+            setError(index);
+        }else{
+            removeError(index);
+        }    
+
+    });
+    
+   }); 
 };
+
+// function validacaoEmail
