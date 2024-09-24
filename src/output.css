@@ -574,10 +574,6 @@ video {
   margin-right: 0.5rem;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -624,10 +620,6 @@ video {
 
 .border {
   border-width: 1px;
-}
-
-.border-\[0\.5px\] {
-  border-width: 0.5px;
 }
 
 .border-red-500 {

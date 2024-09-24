@@ -28,14 +28,14 @@
 
           <div class="flex flex-col sm:w-1/2">
             <label class="mb-2" for="ultimoNome">Sobrenome:</label>
-            <input  class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600 required"  type="text" name="" id="lastName">
+            <input oninput="validacaoCaracteres()" class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600 required"  type="text" name="" id="lastName">
             <span class="span-required hidden text-xs text-red-600">O campo de sobrenome é obrigatório</span>
           </div>
         </div>
         
         <label class="mb-2" for="emailAdress">Email:</label>
-        <input  class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600  required" type="email" name="" id="emailAdress">
-        <span class="span-required hidden text-xs text-red-600">O campo de email é obrigatório</span>
+        <input oninput="validacaoEmail()" class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600  required" type="email" name="" id="emailAdress">
+        <span class="span-required hidden text-xs text-red-600">Digite um email válido</span>
 
         <label class="mb-4" for="">Tipo de Consulta:</label>
 
@@ -56,7 +56,7 @@
         </div>
         
         <label class="mb-2" for="">Mensagem:</label>
-        <textarea  class="p-5 mb-4 border focus:outline-green-600 rounded-lg shadow-sm resize-none required" name="" id=""></textarea>
+        <textarea oninput="validacaoCaracteres()" class="p-5 mb-4 border focus:outline-green-600 rounded-lg shadow-sm resize-none required" name="" id=""></textarea>
         <span class="span-required hidden text-xs text-red-600">Este campo é obrigatório</span>
 
         <label class="mb-2" for="checkbox">
@@ -66,7 +66,7 @@
         <span class="span-required ">Você deve aceitar os termos e condições para prosseguir</span>
       </form>
 
-      <button class="bg-green-600 font-bold text-white rounded-md p-2 w-full" type="button">Enviar</button>
+      <button onclick="validarBotao()" class="bg-green-600 font-bold text-white rounded-md p-2 w-full" type="button">Enviar</button>
   </div>
 </body>
 <script src="script.js"></script>
