@@ -2,73 +2,65 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-
   <title>Frontend Mentor | Formulário de Contato</title>
 </head>
-
 <body class="min-h-screen flex flex-col items-center justify-center bg-green-200">
-  <div class=" bg-white p-5 sm:max-h-screen w-4/5 sm:w-1/2 shadow-md rounded-lg">
+  <div class="bg-white p-5 sm:max-h-screen w-4/5 sm:w-1/2 shadow-md rounded-lg">
+    <h1 class="text-md sm:text-base md:text-xl lg:text-3xl text-gray-700 font-semibold sm:text-basis p-4">Entre em contato conosco</h1>
     
-    <h1 class="text-md sm:text-base md:text-xl lg:text-3xl text-gray-700 font-semibold sm:text-basis p-4">
-      Entre em contato conosco
-    </h1>
-    
-    <form id="form" class="flex flex-col sm:flex-col p-4 text-md sm:text-base md:text-xl lg:text-1xl text-gray-500" name="" action="#">
-        
+    <form id="form" class="flex flex-col
+     sm:flex-col p-4 text-md sm:text-base 
+     md:text-xl lg:text-1xl text-gray-500" 
+     action="#">
         <div class="flex flex-col sm:flex-row sm:justify-between sm:space-x-4">
-
           <div class="flex flex-col sm:w-1/2">
-            <label class="mb-2" for="primeiroNome">Primeiro Nome:</label>
-            <input class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600  required" type="text" name="" id="firstName">
+            <label class="mb-2" for="firstName">Primeiro Nome:</label>
+            <input class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600 required" type="text" id="firstName" name="userName">
             <span class="span-required hidden text-xs text-red-600">O campo de nome é obrigatório e com mais de 3 caracteres</span>
           </div>
-
           <div class="flex flex-col sm:w-1/2">
-            <label class="mb-2" for="ultimoNome">Sobrenome:</label>
-            <input class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600 required"  type="text" name="" id="lastName">
+            <label class="mb-2" for="lastName">Sobrenome:</label>
+            <input class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600 required" type="text" id="lastName" name="userName">
             <span class="span-required hidden text-xs text-red-600">O campo de sobrenome é obrigatório</span>
           </div>
         </div>
-        
         <label class="mb-2" for="emailAdress">Email:</label>
-        <input  class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600  required" type="email" name="" id="emailAdress">
+        <input class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600 required" type="email" id="emailAdress" name="userEmail">
         <span class="span-required hidden text-xs text-red-600">Digite um email válido</span>
-
-        <label class="mb-4" for="">Tipo de Consulta:</label>
-
-        <div class="flex flex-col sm:flex-row sm:space-x-4">
-
-          <div class="w-full sm:w-1/2 mb-2 sm:mb-0">
-            <label class="border rounded-lg shadow-sm p-2 w-full flex" for="">
-              <input class="m-2" type="radio" name="consulta" id="consultaGeral"> Consulta Geral
-            </label>
+       
+        <fieldset>
+          <legend class="mb-4" for="">Tipo de Consulta:</legend>
+          <div class="flex flex-col sm:flex-row sm:space-x-4">
+            <div class="w-full sm:w-1/2 mb-2 sm:mb-0">
+              <label class="border rounded-lg shadow-sm p-2 w-full flex" for="consultaGeral">
+                <input class="m-2" type="radio" name="consulta" id="consultaGeral"> 
+                Consulta Geral
+              </label>
+            </div>
+            <div class="w-full sm:w-1/2 mb-5 sm:mb-0">
+              <label class="border rounded-lg shadow-sm p-2 w-full flex" for="pedidoSuporte">
+                <input class="m-2" type="radio" name="consulta" id="pedidoSuporte">
+                Pedido de Suporte
+              </label>
+            </div>
           </div>
-        
-          <div class="w-full sm:w-1/2 mb-5 sm:mb-0">
-            <label class="border rounded-lg shadow-sm p-2 w-full flex" for="">
-              <input class="m-2" type="radio" name="consulta" id="pedidoSuporte"> 
-              Pedido de Suporte
-            </label>
-          </div>
-        </div>
-        
-        <label class="mb-2" for="">Mensagem:</label>
-        <textarea class="p-5 mb-4 border focus:outline-green-600 rounded-lg shadow-sm resize-none required" name="" id=""></textarea>
+        </fieldset>
+
+        <label class="mb-2" for="message">Mensagem:</label>
+        <textarea class="p-5 mb-4 border focus:outline-green-600 rounded-lg shadow-sm resize-none required" id="message"></textarea>
         <span class="span-required hidden text-xs text-red-600">Este campo é obrigatório</span>
-
         <label class="mb-2" for="checkbox">
-          <input class="mr-2 required" type="checkbox" name="" id="checkbox"> 
+          <input class="mr-2 required" type="checkbox" id="checkbox"> 
           Eu aceito receber contato da equipe.
         </label>
-        <span class="span-required ">Você deve aceitar os termos e condições para prosseguir</span>
-
+        
+        <span class="span-required hidden text-xs text-red-600">Você deve aceitar os termos e condições para prosseguir</span>
         <button class="bg-green-600 font-bold text-white rounded-md p-2 w-full" type="submit">Enviar</button>
+        <span class="span-required hidden text-xs text-red-600">Para enviar o formulário, você deve preencher todos os campos</span>
       </form>
-
-      <!-- <span class="span-required hidden">Para enviar o formulário, você deve preencher todos os campos</span> -->
   </div>
 </body>
 <script src="script.js"></script>

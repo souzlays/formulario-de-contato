@@ -22,12 +22,9 @@ function removeError(index){
 }
 
 function validacaoCaracteres() {
-    let allValid = true;
-
    campos.forEach((campo, index) => {
         if(campo.value.length < 3){
             setError(index);
-            allValid = false;
         }else{
             removeError(index);
        }      
