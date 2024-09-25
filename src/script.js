@@ -8,6 +8,7 @@ form.addEventListener('submit', (event) => {
         event.preventDefault();
         validacaoCaracteres();
         validacaoEmail();
+        validarCheckBox();
 
     });
 
@@ -39,11 +40,14 @@ function validacaoEmail(){
     }
 };
 
-// function validarBotao(){
+function validarCheckBox(){
+    var checkbox = document.querySelector('#checkbox');
+    var spanCheckBox = document.querySelector('.span-checkbox');
+
+        if(!checkbox.checked){
+            spanCheckBox.style.display = 'block';
+        }else{
+            spanCheckBox.style.display = 'none';  
+        }
     
-//     campos.forEach((campos, index) => {
-//         if(campos.value === ""){
-//            return setError(index)
-//         } 
-//     });
-// }
+}
