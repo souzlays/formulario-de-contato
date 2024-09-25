@@ -31,7 +31,7 @@
         <input class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600 required" type="email" id="emailAdress" name="userEmail">
         <span class="span-required hidden text-xs text-red-600">Digite um email válido</span>
        
-        <fieldset>
+        <fieldset id="consulta">
           <legend class="mb-4" for="">Tipo de Consulta:</legend>
           <div class="flex flex-col sm:flex-row sm:space-x-4">
             <div class="w-full sm:w-1/2 mb-2 sm:mb-0">
@@ -47,6 +47,7 @@
               </label>
             </div>
           </div>
+          <span id="errorMessage" class="errorMessage text-xs text-red-600 hidden">É obrigatório selecionar um tipo de consulta.</span>
         </fieldset>
 
         <label class="mb-2" for="message">Mensagem:</label>
