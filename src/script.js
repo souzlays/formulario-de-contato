@@ -5,8 +5,6 @@ const email = document.querySelector('.email');
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const tipoConsulta = document.querySelector('#consulta');
 
-
-
 form.addEventListener('submit', (event) => {
         event.preventDefault();
         validacaoCaracteres();
@@ -17,15 +15,12 @@ form.addEventListener('submit', (event) => {
     });
 
 function validarRadioButtons() {
-    const spanRadioButtons = document.getElementById('#"errorMessage')
     const radioButtons = document.querySelectorAll('input[type="radio"]');
     const atLeastOneRadioButtonMarked = Array.from(radioButtons).some(item => item.checked)
     if(atLeastOneRadioButtonMarked){
         errorMessage.classList.add('hidden');
-        errorMessage.classList.remove('border-red-500');
     }else {
         errorMessage.classList.remove('hidden');
-        errorMessage.classList.add('border-red-500');   
     }
 }    
 
