@@ -4,18 +4,18 @@ const spans = document.querySelectorAll('.span-required');
 const email = document.querySelector('.email');
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const tipoConsulta = document.querySelector('#consulta');
+const radioButtons = document.querySelectorAll('input[type="radio"]');
 
 form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        validacaoCaracteres();
-        validacaoEmail();
-        validarCheckBox();
-        validarRadioButtons();
-
-    });
+    event.preventDefault();
+    validacaoCaracteres();
+    validacaoEmail();
+    validarCheckBox();
+    validarRadioButtons();
+        
+});
 
 function validarRadioButtons() {
-    const radioButtons = document.querySelectorAll('input[type="radio"]');
     const atLeastOneRadioButtonMarked = Array.from(radioButtons).some(item => item.checked)
     if(atLeastOneRadioButtonMarked){
         errorMessage.classList.add('hidden');
@@ -35,14 +35,17 @@ function removeError(index){
 }
 
 function validacaoCaracteres() {
-   campos.forEach((campo, index) => {
-        if(campo.value.length < 3){
-            setError(index);
-        }else{
-            removeError(index);
-       }      
-   }); 
-};
+    campos.forEach((campo, index) => {
+        if (campo.type !== 'checkbox') {
+            if (campo.value.length < 3) {
+                setError(index);
+            } else {
+                removeError(index); //adicionar o popup avisando que o formulário foi enviado
+            }
+        }
+    });
+ }
+ 
 
 function validacaoEmail(){
     if(!emailRegex.test(campos[2].value)){
@@ -62,4 +65,5 @@ function validarCheckBox(){
             spanCheckBox.style.display = 'none';  
         }   
 }
+
 
