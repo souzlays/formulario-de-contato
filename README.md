@@ -1,8 +1,8 @@
-# Frontend Mentor - Contact form
+# Frontend Mentor - Formulário de Contato
 
-![Design preview for the Contact form coding challenge](./design/desktop-preview.jpg)
+<!-- ![Design preview for the Contact form coding challenge](./design/desktop-preview.jpg) -->
 
-## Welcome! 👋
+## Olá! 👋
 
 Thanks for checking out this front-end coding challenge.
 
