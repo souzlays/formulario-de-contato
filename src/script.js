@@ -51,7 +51,7 @@ function removeError(index) {
 function validacaoCaracteres() {
     let isValid = true;
     campos.forEach((campo, index) => {
-        if (campo.type !== 'checkbox' && campo.type !== 'radio') {
+        if (campo.type !== 'checkbox' && campo.type !== 'radio' && campo.type !== 'email') {
             if (campo.value.length < 3) {
                 setError(index);
                 isValid = false;
