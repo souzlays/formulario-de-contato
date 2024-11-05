@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
   <title>Frontend Mentor | Formulário de Contato</title>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center bg-green-200">
+<body class="min-h-screen flex flex-col items-center justify-center bg-green-200 p-4">
 
   <div class="toast hidden mb-4 p-4 max-w-xs bg-white border border-gray-200 rounded-xl shadow-lg dark:bg-neutral-800 dark:border-neutral-700" role="alert" tabindex="-1" aria-labelledby="hs-toast-stack-toggle-update-label">
     <div class="flex p-4">
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="bg-white p-4 sm:max-h-screen w-4/5 sm:w-1/2 shadow-md rounded-lg">
+  <div class="bg-white sm:max-h-screen w-4/5 sm:w-1/2 shadow-md rounded-lg p-4">
     <h1 class="text-lg sm:text-base md:text-xl lg:text-lg text-gray-700 font-semibold sm:text-basis p-4">Entre em contato conosco</h1>
     <form id="form" class="flex flex-col
      sm:flex-col p-4 text-sm sm:text-base 
@@ -35,20 +35,20 @@
           <div class="flex flex-col sm:w-1/2">
             <label class="mb-2" for="firstName">Primeiro Nome:</label>
             <input class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600 required" type="text" id="firstName" name="userName">
-            <span class="span-required hidden text-xs text-red-600">O campo de nome é obrigatório e com mais de 3 caracteres</span>
+            <span class="span-required hidden text-xs text-red-600 mb-2">O campo de nome é obrigatório e com mais de 3 caracteres</span>
           </div>
           <div class="flex flex-col sm:w-1/2">
             <label class="mb-2" for="lastName">Sobrenome:</label>
             <input class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600 required" type="text" id="lastName" name="userName">
-            <span class="span-required hidden text-xs text-red-600">O campo de sobrenome é obrigatório</span>
+            <span class="span-required hidden text-xs text-red-600 mb-2">O campo de sobrenome é obrigatório</span>
           </div>
         </div>
         <label class="mb-2" for="emailAdress">Email:</label>
         <input class="mb-2 border rounded-lg shadow-sm p-2 focus:outline-green-600 required" type="email" id="emailAdress" name="userEmail">
-        <span class="span-required hidden text-xs text-red-600">Digite um email válido</span>
+        <span class="span-required hidden text-xs text-red-600 mb-2">Digite um email válido</span>
        
-        <fieldset id="consulta">
-          <legend class="mb-4" for="">Tipo de Consulta:</legend>
+        <fieldset id="consulta" class="mb-4">
+          <legend class="mb-2" for="">Tipo de Consulta:</legend>
           <div class="flex flex-col sm:flex-row sm:space-x-4">
             <div class="w-full sm:w-1/2 mb-2 sm:mb-0">
               <label class="border rounded-lg shadow-sm p-2 w-full flex" for="consultaGeral">
@@ -63,18 +63,19 @@
               </label>
             </div>
           </div>
-          <span id="errorMessage" class="errorMessage text-xs text-red-600 hidden">É obrigatório selecionar um tipo de consulta.</span>
+          <span id="errorMessage" class="errorMessage text-xs text-red-600 hidden mb-2">É obrigatório selecionar um tipo de consulta.</span>
         </fieldset>
+        
+          <label class="mb-2 mt-4" for="message">Mensagem:</label>
+          <textarea class="p-5 mb-4 border focus:outline-green-600 rounded-lg shadow-sm resize-none required" id="message"></textarea>
+          <span class="span-required hidden text-xs text-red-600">Este campo é obrigatório</span>
+        
 
-        <label class="mb-2" for="message">Mensagem:</label>
-        <textarea class="p-5 mb-4 border focus:outline-green-600 rounded-lg shadow-sm resize-none required" id="message"></textarea>
-        <span class="span-required hidden text-xs text-red-600">Este campo é obrigatório</span>
-
-        <label class="mb-2" for="checkbox">
-          <input class="mr-2 required" type="checkbox" id="checkbox"> 
+        <label class="m-4 pt-4" for="checkbox">
+          <input class="mr-2 mb-4 required" type="checkbox" id="checkbox"> 
           Eu aceito receber contato da equipe.  
         </label>
-        <span class="span-checkbox hidden text-xs text-red-600">Você deve aceitar os termos e condições para prosseguir</span>
+        <span class="mb-2 span-checkbox hidden text-xs text-red-600">Você deve aceitar os termos e condições para prosseguir</span>
         <button class="bg-green-600 font-bold text-white rounded-md p-2 w-full" type="submit">Enviar</button>
       </form>
   </div>
