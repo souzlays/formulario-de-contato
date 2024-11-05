@@ -49,7 +49,7 @@
        
         <fieldset id="consulta" class="mb-4">
           <legend class="mb-2" for="">Tipo de Consulta:</legend>
-          <div class="flex flex-col sm:flex-row sm:space-x-4">
+          <div class="flex flex-col sm:flex-row sm:space-x-4 mb-2">
             <div class="w-full sm:w-1/2 mb-2 sm:mb-0">
               <label class="border rounded-lg shadow-sm p-2 w-full flex" for="consultaGeral">
                 <input class="m-2" type="radio" name="consulta" id="consultaGeral"> 
@@ -63,12 +63,12 @@
               </label>
             </div>
           </div>
-          <span id="errorMessage" class="errorMessage text-xs text-red-600 hidden mb-2">É obrigatório selecionar um tipo de consulta.</span>
+          <span id="errorMessage" class="errorMessage text-xs text-red-600 hidden mt-4">É obrigatório selecionar um tipo de consulta.</span>
         </fieldset>
         
           <label class="mb-2 mt-4" for="message">Mensagem:</label>
           <textarea class="p-5 mb-4 border focus:outline-green-600 rounded-lg shadow-sm resize-none required" id="message"></textarea>
-          <span class="span-required hidden text-xs text-red-600">Este campo é obrigatório</span>
+          <span class="span-required hidden text-xs text-red-600 mb-2">Este campo é obrigatório</span>
         
 
         <label class="m-4 pt-4" for="checkbox">
