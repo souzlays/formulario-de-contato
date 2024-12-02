@@ -19,9 +19,31 @@ form.addEventListener('submit', (event) => {
     isValid = validarRadioButtons() && isValid;
     
     if (isValid) {
+
+        const formData = {
+            userName: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
+            userEmail: document.getElementById('emailAdress').value,
+            consulta: document.querySelector('input[name="consulta"]:checked')?.value,
+            message: document.getElementById('message').value,
+            acceptContact: document.getElementById('checkbox').checked
+        };
+
         toast.classList.remove('hidden');
 
-    }else{
+        fetch('http://localhost:3000/api/form-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+        .then((response) => {
+            return response.json();
+        })
+        .catch((error) => {
+            console.error('Detalhes do erro:', error);
+        });
+    } else {
         toast.classList.add('hidden');
     }
 });

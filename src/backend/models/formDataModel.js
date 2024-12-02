@@ -9,4 +9,4 @@ const formDataSchema = new mongoose.Schema({
 });
 
 const formData = mongoose.model('FormData', formDataSchema);
-export default FormData;
+export default formData;
