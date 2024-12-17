@@ -28,7 +28,7 @@ form.addEventListener('submit', (event) => {
             acceptContact: document.getElementById('checkbox').checked
         };
 
-        showToast(4000);
+        showToast(2000);
 
         fetch('http://localhost:3000/api/form-data', {
             method: 'POST',
