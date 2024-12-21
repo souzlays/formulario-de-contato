@@ -29,6 +29,7 @@ form.addEventListener('submit', (event) => {
         };
 
         showToast(2000);
+        form.reset();
 
         fetch('http://localhost:3000/api/form-data', {
             method: 'POST',
