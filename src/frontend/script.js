@@ -28,7 +28,8 @@ form.addEventListener('submit', (event) => {
             acceptContact: document.getElementById('checkbox').checked
         };
 
-        toast.classList.remove('hidden');
+        showToast(2000);
+        form.reset();
 
         fetch('http://localhost:3000/api/form-data', {
             method: 'POST',
@@ -47,6 +48,21 @@ form.addEventListener('submit', (event) => {
         toast.classList.add('hidden');
     }
 });
+
+function showToast(duration) {
+    toast.classList.remove('hidden', 'opacity-0');
+    toast.classList.add('opacity-100');
+   
+    setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+
+        setTimeout(() => {
+            toast.classList.add('hidden');
+        }, 700);
+    }, duration);
+}
+
 
 
 function validarRadioButtons() {

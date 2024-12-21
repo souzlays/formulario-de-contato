@@ -10,7 +10,7 @@
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center bg-green-200 p-4">
 
-  <div class="toast hidden mb-4 p-4 max-w-xs bg-white border border-gray-200 rounded-xl shadow-lg dark:bg-neutral-800 dark:border-neutral-700" role="alert" tabindex="-1" aria-labelledby="hs-toast-stack-toggle-update-label">
+  <div class="toast hidden mb-4 p-4 max-w-xs bg-white border border-gray-200 rounded-xl shadow-lg dark:bg-neutral-800 dark:border-neutral-700 transition-opacity duration-700 opacity-0" role="alert" tabindex="-1" aria-labelledby="hs-toast-stack-toggle-update-label">
     <div class="flex p-4">
       <div class="shrink-0">
         <svg class="shrink-0 size-4 text-teal-500 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -25,11 +25,10 @@
     </div>
   </div>
 
-  <div class="bg-white sm:max-h-screen w-4/5 sm:w-1/2 shadow-md rounded-lg p-4">
-    <h1 class="text-lg sm:text-base md:text-xl lg:text-lg text-gray-700 font-semibold sm:text-basis p-4">Entre em contato conosco</h1>
+  <div class="bg-white sm:max-h-screen w-4/5 sm:w-1/2 shadow-md rounded-lg py-5 px-5">
+    <h1 class="ext-sm sm:text-lg md:text-xl lg:text-2xl text-gray-700 font-semibold sm:text-basis p-4">Entre em contato conosco</h1>
     <form id="form" class="flex flex-col
-     sm:flex-col p-4 text-sm sm:text-base 
-     md:text-lg lg:text-sm text-gray-500" 
+     sm:flex-col p-4 text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-500" 
      action="#">
         <div class="flex flex-col sm:flex-row sm:justify-between sm:space-x-4">
           <div class="flex flex-col sm:w-1/2">
@@ -48,17 +47,17 @@
         <span class="span-required hidden text-xs text-red-600 mb-2">Digite um email válido</span>
        
         <fieldset id="consulta" class="">
-          <legend class="mb-2" for="">Tipo de Consulta:</legend>
+          <legend class="mb-2 for="">Tipo de Consulta:</legend>
           <div class="flex flex-col sm:flex-row sm:space-x-4 mb-2">
             <div class="w-full sm:w-1/2 mb-2 sm:mb-0">
               <label class="border rounded-lg shadow-sm p-2 w-full flex" for="consultaGeral">
-                <input class="m-2" type="radio" name="consulta" id="consultaGeral" value="Consulta Geral"> 
+                <input class="mr-2" type="radio" name="consulta" id="consultaGeral" value="Consulta Geral"> 
                 Consulta Geral
               </label>
             </div>
             <div class="w-full sm:w-1/2 mb-2 sm:mb-0">
               <label class="border rounded-lg shadow-sm p-2 w-full flex" for="pedidoSuporte">
-                <input class="m-2" type="radio" name="consulta" id="pedidoSuporte" value="Pedido de Suporte">
+                <input class="mr-2" type="radio" name="consulta" id="pedidoSuporte" value="Pedido de Suporte">
                 Pedido de Suporte
               </label>
             </div>
