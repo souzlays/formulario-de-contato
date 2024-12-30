@@ -14,7 +14,7 @@ const mongoURI = process.env.MONGODB_URI;
 const app = express();
 
 const allowedOrigins = [
-    "https://seu-frontend.onrender.com",
+    "https://formulario-de-contato-1.onrender.com",
     "http://localhost:3000"
 ];
 
