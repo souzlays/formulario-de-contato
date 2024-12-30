@@ -2,16 +2,21 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
-import FormData from './models/formDataModel.js';
+import FormData from './src/backend/models/formDataModel.js';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
+console.log('url:', process.env.MONGODB_URI);
+
+const mongoURI = process.env.MONGODB_URI;
+console.log('MongoDB URI:', mongoURI);
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://127.0.0.1/banco-do-formulario', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
+
+mongoose.connect(mongoURI).then(() => {
     console.log('Conexão com o banco de dados estabelecida!');
 
     app.listen(3000, () => {
