@@ -6,10 +6,10 @@ import FormData from './src/backend/models/formDataModel.js';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
-console.log('url:', process.env.MONGODB_URI);
+
 
 const mongoURI = process.env.MONGODB_URI;
-console.log('MongoDB URI:', mongoURI);
+
 
 const app = express();
 app.use(cors());
