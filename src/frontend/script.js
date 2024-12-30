@@ -31,7 +31,7 @@ form.addEventListener('submit', (event) => {
         showToast(2000);
         form.reset();
 
-        fetch('https://formulario-de-contato.onrender.com', {
+        fetch('https://formulario-de-contato.onrender.com/api/form-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
