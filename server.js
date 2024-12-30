@@ -12,7 +12,21 @@ const mongoURI = process.env.MONGODB_URI;
 
 
 const app = express();
-app.use(cors());
+
+const allowedOrigins = [
+    "https://seu-frontend.onrender.com",
+    "http://localhost:3000"
+];
+
+app.use(cors({
+    origin: (origin, callback) => {
+        if(!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        }else {
+            callback(new Error ("Origin not allowed by CORS"))
+        }
+    }
+}));
 app.use(bodyParser.json());
 
 
