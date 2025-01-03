@@ -50,6 +50,8 @@ Os usuários devem ser capazes de:
 - Flexbox
 - Mobile-first 
 - Javascript
+- Node js
+- MongoDB
 
 
 ### O que eu aprendi nesse projeto
